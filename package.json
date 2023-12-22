@@ -1,0 +1,21 @@
+{
+  "name": "monticello",
+  "version": "1.0.0",
+  "description": "Page layout using HTML, CSS, SASS, JS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnastasiyaHolubickaya/Monticello.git"
+  },
+  "author": "Holubytska Anastasiia",
+  "license": "ISC",
+  
+  "homepage": "https://github.com/AnastasiyaHolubickaya/Monticello#readme",
+  "devDependencies": {
+   
+  }
+}
