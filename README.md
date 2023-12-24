@@ -1,5 +1,5 @@
 # Monticello
-![Лого](images/Logo.png)
+![Лого](src/assets/images/readmi-logo.png)
 
 Page layout using HTML, CSS, SASS, JS
 
@@ -9,13 +9,13 @@ Page layout using HTML, CSS, SASS, JS
 ```plaintext
 .
 ├── index.html
-├── style
+├── index.js
+├── styles
+│   ├── components
+│   ├── elements
 │   ├── index.scss
-│   └── icon-fonts.scss
-├── scripts
-│   └── index.js
-└── images
-    └── Logo.png
+└── assets
+    └── images
 ```
 ## Installation
 1. Clone repo https://github.com/AnastasiyaHolubickaya/Monticello.git

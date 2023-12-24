@@ -1,0 +1,77 @@
+#app
+   header .header
+     .wrapper .header__wrapper
+       .logo
+       .navigation
+         .navigation__wrapper
+            ul .navigation__list
+              li .navigation__item
+                a .navigation__link
+                  .navigation__circle
+                  span.navigation__text
+       .social
+         li .social__item
+            a .social__link
+               svg .icon
+
+     section .banner
+       .wrapper .banner__wrapper
+         .banner__title
+         .banner__subtitle
+         .banner__button-down
+         .banner__slider
+           .item
+
+     section .projects
+       .wrapper .project__wrapper
+         .projects__title
+         .projects__item
+           .image
+           .info
+             .info__label
+             .info__title
+             .info__text
+             button.button
+               span
+             .contact-details
+               svg .contact-details__icon
+               .contact-details__address
+
+     section .news
+       .wrapper .news__wrapper
+         .news__title
+         .news__row
+           .slider
+             .slider__item
+               .card
+                 .card__img
+                 .card__title
+                 .card__text
+                 .autor-card
+                   .autor-card__photo
+                   .autor-card__name
+                   .autor-card__data
+
+     section .gallery
+       .wrapper .gallery__wrapper
+         .gallery__title
+         .gallery__images
+         button.button
+           span
+
+     section .contact
+       .wrapper .contact__wrapper
+         .contact__map
+         .contacts-info
+           .contacts-info__title
+           .contact-details
+           form form-feedback
+
+   footer .footer
+     .wrapper .tooter__wrapper
+       .logo
+       .copyrights
+       .social
+         li .social__item
+           a .social__link
+             svg .icon

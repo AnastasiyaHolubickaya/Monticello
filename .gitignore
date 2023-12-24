@@ -1,7 +1,7 @@
 # Node.js
 node_modules/
-# task file
-task.txt
+# class-diagram
+class-diagram.txt
 # Logs
 logs
 *.log
@@ -33,6 +33,11 @@ _site/
 
 # dotenv environment variables file
 .env
+# Package lock
+package-lock.json
+
+# VSCode
+/.vscode
 
 # OS-specific files
 .DS_Store
