@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  z-index: 1000;
   width: 100%;
   right: 0;
   left: 0;
@@ -12,4 +13,7 @@
     padding-top: 50px;
     display: flex;
   }
+}
+.header-fixed{
+  background: var(--bg-gradient);
 }

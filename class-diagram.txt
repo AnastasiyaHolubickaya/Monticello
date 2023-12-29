@@ -15,27 +15,30 @@
                svg .icon
 
      section .banner
+       .banner__slider
+         .item
        .wrapper .banner__wrapper
          .banner__title
          .banner__subtitle
-         .banner__button-down
-         .banner__slider
-           .item
+       .button-down
+
+
 
      section .projects
        .wrapper .project__wrapper
-         .projects__title
-         .projects__item
-           .image
+         .projects__title .title
+         .projects__items
+           .item-image
            .info
              .info__label
-             .info__title
+             .info__title .title
              .info__text
              button.button
                span
              .contact-details
-               svg .contact-details__icon
-               .contact-details__address
+             .contact-details__item
+                 svg
+                 span
 
      section .news
        .wrapper .news__wrapper
@@ -45,9 +48,10 @@
              .slider__item
                .card
                  .card__img
-                 .card__title
-                 .card__text
-                 .autor-card
+                 .card__info
+                   .card__title
+                   .card__text
+                   .autor-card
                    .autor-card__photo
                    .autor-card__name
                    .autor-card__data
@@ -64,8 +68,12 @@
          .contact__map
          .contacts-info
            .contacts-info__title
-           .contact-details
-           form form-feedback
+           .contacts-info__description
+             .contact-details
+               .contact-details__item
+                 svg
+                 span
+             form .form-feedback
 
    footer .footer
      .wrapper .tooter__wrapper

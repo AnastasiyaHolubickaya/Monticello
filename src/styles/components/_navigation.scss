@@ -1,7 +1,13 @@
 .navigation {
+
+  &__wrapper {
+    display: block;
+    width: 100%;
+  }
+
   &__list {
-    align-items: center;
     display: flex;
+    align-items: center;
     gap: 60px;
   }
 

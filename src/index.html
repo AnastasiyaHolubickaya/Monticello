@@ -6,6 +6,8 @@
     <title>Moticello</title>
     <!-- * Styles -->
     <link rel="stylesheet" href="./styles/index.css" />
+    <!--   * Favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <!-- * Icons -->
@@ -37,39 +39,50 @@
 
     <div id="app">
       <!-- * Header -->
-      <header class="header">
+      <header class="header" id="header">
         <div class="wrapper header__wrapper">
           <!-- Logo -->
-          <a href="/" class="logo" title="Home page">
-            <img src="./assets/images/logo.png" alt="logo" />
-          </a>
-
+          <div class="logo">
+            <a href="#" title="Home page">
+              <img src="./assets/images/logo.png" alt="logo"/>
+            </a>
+          </div>
+          <div class="menu-burger" id="menu-burger">
+            <svg class="menu" version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+              <path d="M0 3.429h32v6.857h-32zM0 12.571h32v6.857h-32zM0 21.714h32v6.857h-32z"></path>
+            </svg>
+            <svg class="cross" version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+              <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
+            </svg>
+          </div>
           <!-- Navigation -->
           <nav class="navigation">
+
             <div class="navigation__wrapper">
-              <ul class="navigation__list" role="list">
+
+              <ul class="navigation__list scroll-to" role="list" id="navigation-list">
                 <li class="navigation__item" role="listitem">
                   <a href="#about" class="navigation__link" title="About us">
                     <div class="navigation__circle"></div>
-                    <span>ABOUT US</span>
+                    ABOUT US
                   </a>
                 </li>
                 <li class="navigation__item" role="listitem">
                   <a href="#project" class="navigation__link" title="Projects">
                     <div class="navigation__circle"></div>
-                    <span>PROJECTS</span>
+                    PROJECTS
                   </a>
                 </li>
                 <li class="navigation__item" role="listitem">
                   <a href="#news" class="navigation__link" title="News">
                     <div class="navigation__circle"></div>
-                    <span>NEWS</span>
+                    NEWS
                   </a>
                 </li>
                 <li class="navigation__item" role="listitem">
                   <a href="#contact" class="navigation__link" title="Contact">
                     <div class="navigation__circle"></div>
-                    <span>CONTACT</span>
+                    CONTACT
                   </a>
                 </li>
               </ul>
@@ -79,28 +92,381 @@
           <!-- Social -->
           <ul class="social">
             <li class="social__item">
-              <a href="https://www.facebook.com/" class="social__link" target="_blank" title="Facebook">
-                <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
+              <a
+                href="https://www.facebook.com/"
+                class="social__link"
+                target="_blank"
+                title="Facebook"
+              >
+                <svg class="icon">
+                  <use xlink:href="./assets/images/svg/sprite.svg#facebook"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
-              <a href="https://www.twitter.com/" class="social__link" target="_blank" title="Twitter">
-                <svg class="icon"><use xlink:href="#icon-twitter"></use></svg
-              ></a>
+              <a
+                href="https://www.twitter.com/"
+                class="social__link"
+                target="_blank"
+                title="Twitter"
+              >
+                <svg class="icon">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg
+                >
+              </a>
             </li>
             <li class="social__item">
-              <a href="https://www.Instagram.com/" class="social__link" target="_blank" title="Instagram">
-                <svg class="icon"><use xlink:href="#icon-instagram"></use></svg
-              ></a>
+              <a
+                href="https://www.Instagram.com/"
+                class="social__link"
+                target="_blank"
+                title="Instagram"
+              >
+                <svg class="icon">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg
+                >
+              </a>
             </li>
           </ul>
         </div>
       </header>
 
-      <div class="banner"></div>
+      <!-- * Section Banner -->
+      <section class="banner">
+        <!-- Slider main container -->
+        <div class="swiper " id="header-slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="image-slider">
+                <img src="./assets/images/header-slider/header-slider1.jpg" alt=""/>
+
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-slider">
+                <img src="./assets/images/header-slider/buildings-modern-cities.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image-slider">
+                <img src="./assets/images/header-slider/png-tranhouse.png" alt=""/>
+              </div>
+            </div>
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination "></div>
+
+          <!-- If we need navigation buttons 
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>-->
+
+          <!-- If we need scrollbar -->
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <div class="wrapper banner-wrapper">
+          <div class="banner__title">
+            <h1>SIMPLE & MODERN</h1>
+          </div>
+          <div class="banner__subtitle">
+            <p>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+          </div>
+        </div>
+        <div class="button-down scroll-to">
+          <a href="#project" title="next">
+            <svg>
+              <use xlink:href="./assets/images/svg/icon-sprite.svg#arrow-down"></use>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- * Section Project -->
+      <section class="projects" id="project">
+        <div class="wrapper projects__wrapper">
+          <h2 class="projects__title title">WHAT WE DO</h2>
+            <div class="projects__items">
+              <div class="item-image">
+                <img src="./assets/images/joel-filipe.jpg" alt="picture" title="photo trade center">
+              </div>
+              <div class="info">
+                <span class="info__label">
+                  one world
+                </span>
+                <h2 class="info__title title">
+                  trade center
+                </h2>
+               <p class="info__text">
+                 Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.
+               </p>
+                <button class="button">
+                  <span>more details</span>
+                </button>
+                <div class="contact-details">
+                  <svg>
+                    <use xlink:href="./assets/images/svg/icon-sprite.svg#location"></use>
+                  </svg>
+                  <span class="contact-details__adress">
+                    New York City, United States - 1776 feet
+                  </span>
+                </div>
+
+              </div>
+              <div class="info">
+                <span class="info__label">
+                  international
+                </span>
+                <h2 class="info__title title">
+                  commerce center
+                </h2>
+                <p class="info__text">
+                  Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.
+                </p>
+                <button class="button">
+                  <span>more details</span>
+                </button>
+                <div class="contact-details">
+                  <svg>
+                    <use xlink:href="./assets/images/svg/icon-sprite.svg#location"></use>
+                  </svg>
+                  <span class="contact-details__adress">
+                    Hong Kong - 1588 feet
+                  </span>
+                </div>
+
+              </div>
+              <div class="item-image">
+                <img src="./assets/images/photos-1284.jpg" alt="picture" title="photo commerce center">
+              </div>
+            </div>//projects-item
+        </div>
+      </section>
+
+      <!-- * Section News -->
+      <section class="news" id="news">
+        <div class="wrapper news__wrapper">
+          <hr>
+          <h2 class="news__title title">
+            latest news
+          </h2>
+          <div class="news__row">
+            <div class="card">
+              <div class="card__img">
+                <img src="./assets/images/news-slider/lauren-mancke.jpg" alt="picture">
+              </div>
+              <div class="card__info">
+                <h3 class="card__title">see the unmatched beauty of tne create.</h3>
+                <p class="card__text">
+                  Free directories: directories are perfect for customers that are searching for...
+                </p>
+                <div class="autor-card">
+                  <div class="autor-card__photo">
+                    <img src="./assets/images/news-slider/photo1.jpg" alt="autor's photo">
+                  </div>
+                  <div class="autor-card__info">
+                    <p class="autor-card__name">
+                      alja brun
+                    </p>
+                    <p class="autor-card__date">
+                      20 jan 2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>//card
+            <div class="card">
+              <div class="card__img">
+                <img src="./assets/images/news-slider/lauren-mancke.jpg" alt="picture">
+              </div>
+              <div class="card__info">
+                <h3 class="card__title">see the unmatched beauty of tne create.</h3>
+                <p class="card__text">
+                  Free directories: directories are perfect for customers that are searching for...
+                </p>
+                <div class="autor-card">
+                  <div class="autor-card__photo">
+                    <img src="./assets/images/news-slider/photo1.jpg" alt="autor's photo">
+                  </div>
+                  <div class="autor-card__info">
+                    <p class="autor-card__name">
+                      alja brun
+                    </p>
+                    <p class="autor-card__date">
+                      20 jan 2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>//card
+            <div class="card">
+              <div class="card__img">
+                <img src="./assets/images/news-slider/lauren-mancke.jpg" alt="picture">
+              </div>
+              <div class="card__info">
+                <h3 class="card__title">see the unmatched beauty of tne create.</h3>
+                <p class="card__text">
+                  Free directories: directories are perfect for customers that are searching for...
+                </p>
+                <div class="autor-card">
+                  <div class="autor-card__photo">
+                    <img src="./assets/images/news-slider/photo1.jpg" alt="autor's photo">
+                  </div>
+                  <div class="autor-card__info">
+                    <p class="autor-card__name">
+                      alja brun
+                    </p>
+                    <p class="autor-card__date">
+                      20 jan 2020
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>//card
+          </div>
+        </div>//wrapper
+      </section>
+
+      <!-- * Section Gallery -->
+      <section class="gallery" id="about">
+        <div class="wrapper gallery__wrapper">
+          <hr>
+          <h2 class="gallery__title title">
+            gallery
+          </h2>
+          <div class="gallery__images">
+            <div class="img-item">
+              <img src="./assets/images/images-gallery/scott-webb-176434%201.jpg" alt="photo">
+            </div>
+            <div class="img-item">
+              <img src="./assets/images/images-gallery/photos-13323.jpg" alt="photo">
+            </div>
+            <div class="img-item">
+              <img src="./assets/images/images-gallery/echo-grid.jpg" alt="photo">
+            </div>
+            <div class="img-item">
+              <img src="./assets/images/images-gallery/fuse-brussels.jpg" alt="photo">
+            </div>
+            <div class="img-item">
+              <img src="./assets/images/images-gallery/tu-tram-pham.jpg" alt="photo">
+            </div>
+          </div>
+          <button class="button">
+            <span>see more</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- * Section Contact -->
+      <section class="contact" id="contact">
+        <div class="wrapper contact__wrapper">
+          <div class="contact__map">
+
+          </div>
+          <div class="contacts-info">
+            <hr>
+            <h2 class="contacts-info__title title">
+              get in touch
+            </h2>
+            <div class="contact-info__description">
+              <div class="contact-details">
+                <div class="contact-details__item">
+                  <svg>
+                    <use xlink:href="./assets/images/svg/icon-sprite.svg#location"></use>
+                  </svg>
+                  <span>
+                    91 Nolan Extensions Suite 670
+                  </span>
+                </div>
+                <div class="contact-details__item">
+                  <svg>
+                    <use xlink:href="./assets/images/svg/icon-sprite.svg#phone"></use>
+                  </svg>
+                  <span>
+                    +001 356-868-2454
+                  </span>
+                </div>
+                <div class="contact-details__item">
+                  <svg>
+                    <use xlink:href="./assets/images/svg/icon-sprite.svg#print"></use>
+                  </svg>
+                  <span>
+                    monticello@service.com
+                  </span>
+                </div>
+                <div class="contact-details__item">
+                  <svg>
+                    <use xlink:href="./assets/images/svg/icon-sprite.svg#clock"></use>
+                  </svg>
+                  <span>
+                    From 07:05AM to 19.30PM
+                  </span>
+                </div>
+
+            </div>
+              <form name="form-feedback">
+                <div>
+                  <label for="name">Mollie Medina</label>
+                  <input type="text" id="name">
+                  <label for="email">Email</label>
+                  <input type="email" id="email">
+                </div>
+                <button type="submit" class="button">submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Footer -->
+      <footer class="footer">
+        <!-- Logo -->
+        <a href="/" class="logo" title="Home page">
+          <img src="./assets/images/logo.png" alt="logo" />
+        </a>
+        <!-- Social -->
+        <ul class="social">
+          <li class="social__item">
+            <a
+              href="https://www.facebook.com/"
+              class="social__link"
+              target="_blank"
+              title="Facebook"
+            >
+              <svg class="icon"><use xlink:href="./assets/images/svg/sprite.svg#facebook"></use></svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a
+              href="https://www.twitter.com/"
+              class="social__link"
+              target="_blank"
+              title="Twitter"
+            >
+              <svg class="icon"><use xlink:href="#icon-twitter"></use></svg
+              ></a>
+          </li>
+          <li class="social__item">
+            <a
+              href="https://www.Instagram.com/"
+              class="social__link"
+              target="_blank"
+              title="Instagram"
+            >
+              <svg class="icon"><use xlink:href="#icon-instagram"></use></svg
+              ></a>
+          </li>
+        </ul>
+        <div>copyrights @ 2020 Montichello</div>
+      </footer>
     </div>
 
     <!-- * Scripts -->
-    <script type="module" src="./index.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer type="module" src="./index.js"></script>
+
   </body>
 </html>

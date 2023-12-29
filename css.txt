@@ -1,0 +1,51 @@
+Позиционирование и блочная модель:
+position
+top, right, bottom, left
+display
+float
+width, height
+margin, padding
+
+Типографика:
+font, font-family, font-size, font-weight
+line-height
+color
+
+Цвет и фон:
+background, background-color, background-image
+
+Бордюры:
+border, border-radius
+
+Текст:
+text-align
+text-decoration
+text-transform
+white-space
+
+Прочие стилизации:
+list-style
+
+Блочная модель:
+box-sizing
+overflow
+
+Позиционирование:
+z-index
+
+Трансформации и анимации:
+transform
+transition
+
+Flexbox и Grid:
+display: flex, display: grid
+
+Медиа-запросы:
+@media
+
+Псевдоэлементы и псевдоклассы:
+:before, :after
+:hover, :active, :focus
+
+Импорты:
+@import

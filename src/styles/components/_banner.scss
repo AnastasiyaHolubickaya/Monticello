@@ -1,4 +1,31 @@
 .banner {
-  background-color: var(--c-blue);
-  min-height: 100vh;
+  position: relative;
+  height: 650px;
+  font-family: var(--f-montserrat);
+  font-style: normal;
+  line-height: normal;
+  color: var(--c-white);
+  background: var(--bg-gradient);
+  text-align: center;
+  text-transform: uppercase;
+
+  &__title {
+    margin-bottom: 20px;
+    @include adaptive-font(80, 25);
+    font-weight: 700;
+    letter-spacing: 8px;
+  }
+
+  &__subtitle {
+    @include adaptive-font(18, 11);
+    font-weight: 400;
+    letter-spacing: 5.4px;
+  }
+}
+
+.banner-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

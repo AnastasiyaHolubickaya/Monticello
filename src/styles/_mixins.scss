@@ -1,0 +1,13 @@
+// width wrapper
+$max-width: 1170;
+
+@mixin adaptive-font($pc-size, $mob-size){
+$add-size: $pc-size - $mob-size;
+  $add-mob-size: $add-size + $add-size * 0.7;
+  @media(max-width: 767px){
+    font-size: calc(#{$mob-size + px} + #{$add-mob-size} * ((100vw - 320px) / #{$max-width}));
+  }
+  @media(min-width: 767px){
+    font-size: calc(#{$mob-size + px} + #{$add-size} * (100vw  / #{$max-width}));
+  }
+}

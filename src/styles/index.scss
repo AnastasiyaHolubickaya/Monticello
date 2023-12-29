@@ -2,9 +2,11 @@
 @import './variables';
 @import './main';
 @import './base';
+@import "./mixins";
 
 // * Components
 @import './components/index';
-
+@import '../../node_modules/swiper/swiper-bundle.css';
+//@import 'swiper-bundle.css';
 // * Elements
 @import './elements/index';
