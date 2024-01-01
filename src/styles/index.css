@@ -134,6 +134,13 @@ ul {
   width: 100%;
 }
 
+hr {
+  width: 100px;
+  height: 1px;
+  margin: 0 auto;
+  color: var(--c-blue-dark);
+}
+
 .header {
   position: fixed;
   z-index: 1000;
@@ -143,6 +150,7 @@ ul {
   top: 0;
 }
 .header__wrapper {
+  position: relative;
   justify-content: space-between;
   padding-bottom: 50px;
   align-items: center;
@@ -186,7 +194,7 @@ ul {
 
 .menu-burger {
   position: absolute;
-  right: 211px;
+  right: 10px;
   display: none;
   cursor: pointer;
 }
@@ -229,7 +237,7 @@ ul {
   display: none !important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1110px) {
   .menu-burger {
     display: block;
   }
@@ -352,6 +360,63 @@ ul {
   right: var(--swiper-pagination-right, 52px);
 }
 
+.form-registration {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-gradient);
+  z-index: 1000;
+}
+
+.icon-cross svg {
+  width: 25px;
+  height: 25px;
+}
+
+.registration {
+  background-color: var(--c-white);
+  color: var(--c-black);
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+  width: 100%;
+}
+.registration__title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.registration__item {
+  margin-bottom: 20px;
+}
+.registration__item__title {
+  cursor: pointer;
+}
+.registration__label {
+  flex-direction: column;
+  display: flex;
+  gap: 10px;
+}
+.registration__input {
+  width: 100%;
+}
+.registration__error {
+  color: var(--c-red);
+  font-size: 12px;
+  height: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
 .logo {
   max-width: 240px;
   display: flex;
@@ -381,6 +446,28 @@ ul {
   height: 5px;
   fill: var(--c-white);
   transition: var(--t-eazy);
+}
+
+.btn-login {
+  position: absolute;
+  left: 270px;
+}
+.btn-login span {
+  color: var(--c-white);
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .btn-login span {
+    font-size: calc(12px + 3.4 * (100vw - 320px) / 1170);
+  }
+}
+@media (min-width: 767px) {
+  .btn-login span {
+    font-size: calc(12px + 2 * 100vw / 1170);
+  }
+}
+.btn-login span:hover {
+  color: var(--c-blue-dark);
 }
 
 /*# sourceMappingURL=index.css.map */

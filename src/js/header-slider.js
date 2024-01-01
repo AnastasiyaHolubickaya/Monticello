@@ -1,44 +1,46 @@
-//inisialization slider Swiper
-function newSlider(id) {
-  if (typeof id !== 'string') {
-    throw  new Error(`${id} is not a string `)
+function newSlider() {
+  const DOMHeaderSliderElement = document.getElementById('js-header-slider');
+
+  if (!DOMHeaderSliderElement) {
+    throw new Error(`Element with id - ${id} is absent`);
   }
-  if (id === 'header-slider') {
-    const headerSlider = new Swiper(`#${id}`, {
+  const id = DOMHeaderSliderElement.id;
 
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+  const headerSlider = new Swiper(`#${id}`, {
 
-      },
-      //grabCursor: true,
-      slideToClickedSlide: true,
-      //keyboard
-      keyboard: {
-        enable: true,
-        onlyInViewport: true,
-        pageUpDown: true,
-      },
-      //mouse wheel control
-      // mousewheel: {
-      //   sensitivity: 1,
-      //   //eventsTarget: ".image-slider"
-      // },
-      autoHeight: true,
-      slidesPerView: 1,
-      freeMode: true,
-      // autoplay: {
-      //   delay: 1000,
-      //   stopOnLastSlide: true,
-      //   disableOnInteraction: false,
-      //
-      // },
-      speed: 800,
-      direction: 'vertical',
-      // effect: 'fade',
-      // fadeEffect: {
-      //   crossFade: true,
-      // },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+
+    },
+    //grabCursor: true,
+    slideToClickedSlide: true,
+    //keyboard
+    keyboard: {
+      enable: true,
+      onlyInViewport: true,
+      pageUpDown: true,
+    },
+    //mouse wheel control
+    // mousewheel: {
+    //   sensitivity: 1,
+    //   //eventsTarget: ".image-slider"
+    // },
+    autoHeight: true,
+    slidesPerView: 1,
+    freeMode: true,
+    // autoplay: {
+    //   delay: 1000,
+    //   stopOnLastSlide: true,
+    //   disableOnInteraction: false,
+    //
+    // },
+    speed: 800,
+    direction: 'vertical',
+    // effect: 'fade',
+    // fadeEffect: {
+    //   crossFade: true,
+    // },
 //   breakpoints: {
 // 320: {
 //   slidesPerView: 1,
@@ -55,12 +57,7 @@ function newSlider(id) {
 //     loadOnTransitionStart: false,
 //     loadPrevNext: false,
 //   }
-    });
-  }
-
-  if (id === 'news-slider') {
-
-  }
+  });
 }
 
 export default newSlider;

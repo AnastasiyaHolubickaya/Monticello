@@ -39,7 +39,7 @@
 
     <div id="app">
       <!-- * Header -->
-      <header class="header" id="header">
+      <header class="header" id="js-header">
         <div class="wrapper header__wrapper">
           <!-- Logo -->
           <div class="logo">
@@ -47,7 +47,7 @@
               <img src="./assets/images/logo.png" alt="logo"/>
             </a>
           </div>
-          <div class="menu-burger" id="menu-burger">
+          <div class="menu-burger" id="js-menu-burger">
             <svg class="menu" version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
               <path d="M0 3.429h32v6.857h-32zM0 12.571h32v6.857h-32zM0 21.714h32v6.857h-32z"></path>
             </svg>
@@ -57,10 +57,9 @@
           </div>
           <!-- Navigation -->
           <nav class="navigation">
-
             <div class="navigation__wrapper">
 
-              <ul class="navigation__list scroll-to" role="list" id="navigation-list">
+              <ul class="navigation__list scroll-to" role="list" id="js-navigation-list">
                 <li class="navigation__item" role="listitem">
                   <a href="#about" class="navigation__link" title="About us">
                     <div class="navigation__circle"></div>
@@ -85,58 +84,95 @@
                     CONTACT
                   </a>
                 </li>
+                <button class="btn-login" id="js-btn-login"><span>login</span></button>
+                <ul class="social">
+                  <li class="social__item">
+                    <a
+                      href="https://www.facebook.com/"
+                      class="social__link"
+                      target="_blank"
+                      title="Facebook"
+                    >
+                      <svg class="icon">
+                        <use xlink:href="#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a
+                      href="https://www.twitter.com/"
+                      class="social__link"
+                      target="_blank"
+                      title="Twitter"
+                    >
+                      <svg class="icon">
+                        <use xlink:href="#icon-twitter"></use>
+                      </svg
+                      >
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a
+                      href="https://www.Instagram.com/"
+                      class="social__link"
+                      target="_blank"
+                      title="Instagram"
+                    >
+                      <svg class="icon">
+                        <use xlink:href="#icon-instagram"></use>
+                      </svg
+                      >
+                    </a>
+                  </li>
+                </ul>
               </ul>
+
             </div>
           </nav>
-
-          <!-- Social -->
-          <ul class="social">
-            <li class="social__item">
-              <a
-                href="https://www.facebook.com/"
-                class="social__link"
-                target="_blank"
-                title="Facebook"
-              >
-                <svg class="icon">
-                  <use xlink:href="./assets/images/svg/sprite.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a
-                href="https://www.twitter.com/"
-                class="social__link"
-                target="_blank"
-                title="Twitter"
-              >
-                <svg class="icon">
-                  <use xlink:href="#icon-twitter"></use>
-                </svg
-                >
-              </a>
-            </li>
-            <li class="social__item">
-              <a
-                href="https://www.Instagram.com/"
-                class="social__link"
-                target="_blank"
-                title="Instagram"
-              >
-                <svg class="icon">
-                  <use xlink:href="#icon-instagram"></use>
-                </svg
-                >
-              </a>
-            </li>
-          </ul>
         </div>
       </header>
+      <!-- * Form Registration -->
+      <div class="form-registration" id="js-form-registration">
+        <div class="icon-cross" id="js-close-form">
+          <svg class="cross" version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32">
+            <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
+          </svg>
+        </div>
+        <form method="post" id="js-registration" class="registration">
+          <!-- Registration title -->
+          <h2 class="registration__title">Registration</h2>
+
+          <div class="registration__item">
+            <label class="registration__label">
+              <span class="registration__item__title">First name</span>
+              <div>
+                <input class="registration__input" type="text" name="firstName" placeholder="Enter your first name" id="js-registration-first-name" />
+                <div class="registration__error" id="js-registration-first-name-error"></div>
+              </div>
+            </label>
+          </div>
+
+          <div class="registration__item">
+            <label class="registration__label">
+              <span class="registration__item__title">Email</span>
+              <div>
+                <input class="registration__input" type="text" name="email" placeholder="Enter your email" id="js-registration-email" />
+                <div class="registration__error" id="js-registration-email-error"></div>
+              </div>
+            </label>
+          </div>
+
+          <!-- Registration submit -->
+          <button type="submit">
+            <span>Submit</span>
+          </button>
+        </form>
+      </div>
 
       <!-- * Section Banner -->
       <section class="banner">
         <!-- Slider main container -->
-        <div class="swiper " id="header-slider">
+        <div class="swiper " id="js-header-slider">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -187,9 +223,11 @@
 
       <!-- * Section Project -->
       <section class="projects" id="project">
-        <div class="wrapper projects__wrapper">
-          <h2 class="projects__title title">WHAT WE DO</h2>
-            <div class="projects__items">
+        <hr>
+        <h2 class="projects__title title">WHAT WE DO</h2>
+        <div class="project__items-trade">
+          <div class="wrapper projects__wrapper">
+            <div>
               <div class="item-image">
                 <img src="./assets/images/joel-filipe.jpg" alt="picture" title="photo trade center">
               </div>
@@ -200,31 +238,8 @@
                 <h2 class="info__title title">
                   trade center
                 </h2>
-               <p class="info__text">
-                 Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.
-               </p>
-                <button class="button">
-                  <span>more details</span>
-                </button>
-                <div class="contact-details">
-                  <svg>
-                    <use xlink:href="./assets/images/svg/icon-sprite.svg#location"></use>
-                  </svg>
-                  <span class="contact-details__adress">
-                    New York City, United States - 1776 feet
-                  </span>
-                </div>
-
-              </div>
-              <div class="info">
-                <span class="info__label">
-                  international
-                </span>
-                <h2 class="info__title title">
-                  commerce center
-                </h2>
                 <p class="info__text">
-                  Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.
+                  Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.
                 </p>
                 <button class="button">
                   <span>more details</span>
@@ -233,16 +248,49 @@
                   <svg>
                     <use xlink:href="./assets/images/svg/icon-sprite.svg#location"></use>
                   </svg>
-                  <span class="contact-details__adress">
-                    Hong Kong - 1588 feet
+                  <span class="contact-details__address">
+                    New York City, United States - 1776 feet
                   </span>
                 </div>
 
               </div>
-              <div class="item-image">
-                <img src="./assets/images/photos-1284.jpg" alt="picture" title="photo commerce center">
+            </div>
+
+          </div>
+        </div>
+        <div class="project__items-commerce">
+          <div class="wrapper project__wrapper">
+            <div class="info">
+                <span class="info__label">
+                  international
+                </span>
+              <h2 class="info__title title">
+                commerce center
+              </h2>
+              <p class="info__text">
+                Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.
+              </p>
+              <button class="button">
+                <span>more details</span>
+              </button>
+              <div class="contact-details">
+                <svg>
+                  <use xlink:href="./assets/images/svg/icon-sprite.svg#location"></use>
+                </svg>
+                <span class="contact-details__adress">
+                    Hong Kong - 1588 feet
+                  </span>
               </div>
-            </div>//projects-item
+
+            </div>
+            <div class="item-image">
+              <img src="./assets/images/photos-1284.jpg" alt="picture" title="photo commerce center">
+            </div>
+          </div>
+
+
+
+
         </div>
       </section>
 

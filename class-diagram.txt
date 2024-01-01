@@ -25,9 +25,9 @@
 
 
      section .projects
-       .wrapper .project__wrapper
-         .projects__title .title
-         .projects__items
+       .projects__title .title
+       .project__items-trade
+         .wrapper .project__wrapper
            .item-image
            .info
              .info__label
@@ -36,9 +36,19 @@
              button.button
                span
              .contact-details
-             .contact-details__item
+               .contact-details__item
                  svg
                  span
+       .project__items-commerce
+         .wrapper .project__wrapper
+           .item-image
+           .info
+             .info__label
+             .info__title .title
+             .info__text
+             button.button
+               span
+             .contact-details
 
      section .news
        .wrapper .news__wrapper

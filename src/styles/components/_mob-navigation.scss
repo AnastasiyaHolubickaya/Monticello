@@ -1,7 +1,7 @@
 
 .menu-burger {
   position: absolute;
-  right: 211px;
+  right: 10px;
   display: none;
   cursor: pointer;
 
@@ -51,7 +51,7 @@
   display: none!important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1110px) {
 
   .menu-burger {
     display: block;

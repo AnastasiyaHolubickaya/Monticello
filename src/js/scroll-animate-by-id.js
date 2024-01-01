@@ -1,19 +1,31 @@
 import anime from '../../node_modules/animejs/lib/anime.es.js';
 
-function scrollAnimateById(target) {
-  console.log(target);
-  const targetId = target.getAttribute('href').substr(1);
-  console.log(targetId);
-  const DOMTargetSection = document.getElementById(targetId);
-  console.log(DOMTargetSection.id);
-  if (!DOMTargetSection) {
-    throw new Error(`Element with id - ${DOMTargetSection.id} is absent`);
+
+function scrollAnimateById() {
+  const DOMAnchorlinks = document.querySelectorAll('.scroll-to a');
+
+  if (!DOMAnchorlinks) {
+    throw new Error(`Element  is absent`);
   }
-  anime({
-    targets: document.documentElement,
-    scrollTop: DOMTargetSection.offsetTop,
-    duration: 3000, // Длительность анимации в миллисекундах
-    easing: 'easeInOutQuad' // Тип анимации
+
+  DOMAnchorlinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = e.target.getAttribute('href').substr(1);
+
+      const DOMTargetSection = document.getElementById(targetId);
+
+      if (!DOMTargetSection) {
+        throw new Error(`Element  is absent`);
+      }
+      anime({
+        targets: document.documentElement,
+        scrollTop: DOMTargetSection.offsetTop,
+        duration: 3000,
+        easing: 'easeInOutQuad'
+      });
+    })
   });
 }
 

@@ -1,19 +1,21 @@
-import isDomElement from "./is-dom-element.js";
+function scrollChangeProperty() {
+  const DOMHeader = document.getElementById('js-header');
 
-
-function scrollChangeProperty(element, className) {
-  if (!isDomElement(element)) {
-    throw new Error(`${element} -  is not DOM Element!`)
+  if (!DOMHeader) {
+    throw new Error(`Element with id - ${DOMHeader.id} is absent`);
   }
+  window.addEventListener('scroll', function (e) {
 
-  const scrollTop = window.scrollY;
+    const scrollTop = window.scrollY;
 
-  if (scrollTop > 0) {
-    element.classList.add(`${className}`);
+    if (scrollTop > 0) {
+      DOMHeader.classList.add(`header-fixed`);
 
-  } else {
-    element.classList.remove(`${className}`);
-  }
+    } else {
+      DOMHeader.classList.remove(`header-fixed`);
+    }
+  });
+
 }
 
 export default scrollChangeProperty;

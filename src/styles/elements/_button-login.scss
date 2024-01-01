@@ -1,0 +1,13 @@
+.btn-login {
+  position: absolute;
+  left: 270px;
+  & span{
+    @include adaptive-font(14, 12);
+    color: var(--c-white);
+    text-transform: uppercase;
+    &:hover{
+      color: var(--c-blue-dark);
+    }
+  }
+
+}

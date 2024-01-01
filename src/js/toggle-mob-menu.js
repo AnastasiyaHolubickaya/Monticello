@@ -1,15 +1,35 @@
-import {DOMBurgerMenu, DOMListNavMenu} from "./get-dom-elements.js";
-
 function toggleMobMenu() {
-  if (DOMListNavMenu.classList.contains('mob-menu')) {
+  const DOMBurgerMenu = document.getElementById('js-menu-burger');
 
-    DOMListNavMenu.classList.remove('mob-menu');
+  const DOMItemsListNavMenu = document.querySelectorAll('.navigation__item');
 
-    if (DOMBurgerMenu.classList.contains('active')) {
+  const DOMListNavMenu = document.getElementById('js-navigation-list');
 
-      DOMBurgerMenu.classList.remove('active');
-    }
+  if (!DOMItemsListNavMenu) {
+    throw new Error(`Elements  is absent`);
   }
+  DOMItemsListNavMenu.forEach(item => {
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      if (!DOMListNavMenu) {
+        throw new Error(`Element  is absent`);
+      }
+      if (DOMListNavMenu.classList.contains('mob-menu')) {
+
+        DOMListNavMenu.classList.remove('mob-menu');
+
+        if (!DOMBurgerMenu) {
+          throw new Error(`Element  is absent`);
+        }
+
+        if (DOMBurgerMenu.classList.contains('active')) {
+
+          DOMBurgerMenu.classList.remove('active');
+        }
+      }
+    })
+  });
 }
 
 export default toggleMobMenu;
