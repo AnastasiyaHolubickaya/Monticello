@@ -11,3 +11,19 @@ $add-size: $pc-size - $mob-size;
     font-size: calc(#{$mob-size + px} + #{$add-size} * (100vw  / #{$max-width}));
   }
 }
+
+@mixin adaptiveImg($width, $percent) {
+  width: $width;
+  padding: 0 0 $percent 0;
+  overflow: hidden;
+  position: relative;
+  & img,
+  iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

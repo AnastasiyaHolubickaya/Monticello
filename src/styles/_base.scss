@@ -5,9 +5,22 @@
   margin: 0 auto;
   width: 100%;
 }
-hr{
-  width:100px;
-  height: 1px;
-  margin: 0 auto;
+
+.title {
+  font-family: var(--f-montserrat);
   color: var(--c-blue-dark);
+  @include adaptive-font(44, 20);
+  font-weight: 700;
+  text-transform: uppercase;
+  &:before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: var(--c-blue-dark);
+  }
+}
+section{
+  text-align: center;
 }

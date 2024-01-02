@@ -1,8 +1,9 @@
 @import './reset';
 @import './variables';
+@import "./mixins";
 @import './main';
 @import './base';
-@import "./mixins";
+
 
 // * Components
 @import './components/index';

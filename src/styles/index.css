@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import '../../node_modules/swiper/swiper-bundle.css';
 * {
   padding: 0;
@@ -134,11 +135,33 @@ ul {
   width: 100%;
 }
 
-hr {
+.title {
+  font-family: var(--f-montserrat);
+  color: var(--c-blue-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .title {
+    font-size: calc(20px + 40.8 * (100vw - 320px) / 1170);
+  }
+}
+@media (min-width: 767px) {
+  .title {
+    font-size: calc(20px + 24 * 100vw / 1170);
+  }
+}
+.title:before {
+  content: "";
+  display: block;
   width: 100px;
   height: 1px;
   margin: 0 auto;
-  color: var(--c-blue-dark);
+  background-color: var(--c-blue-dark);
+}
+
+section {
+  text-align: center;
 }
 
 .header {
@@ -417,6 +440,151 @@ hr {
   display: block;
 }
 
+.projects {
+  width: 100%;
+  margin-top: 6.25%;
+  text-align: center;
+}
+.projects__title {
+  margin-bottom: 5.625%;
+}
+.projects__title:before {
+  margin-bottom: 1.875%;
+}
+.projects__wrapper {
+  padding-top: 4.75%;
+  display: flex;
+  flex-direction: row;
+  gap: 5.83%;
+}
+.projects__items {
+  position: relative;
+  margin-bottom: 10%;
+}
+
+.item-coloring {
+  position: absolute;
+  top: 0;
+  width: 36.5625%;
+  padding: 0 0 28.5% 0;
+}
+
+.block-left {
+  left: 0;
+  background-color: var(--c-blue);
+}
+
+.block-right {
+  right: 0;
+  background-color: var(--c-blue-2);
+}
+
+.item-image {
+  width: 53.8%;
+  padding: 0 0 40.2% 0;
+  overflow: hidden;
+  position: relative;
+}
+.item-image img,
+.item-image iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  .projects__wrapper {
+    flex-direction: column;
+  }
+}
+.info {
+  width: 40.16%;
+  padding-bottom: 26px;
+  align-self: flex-end;
+  color: var(--c-blue-dark);
+  text-align: left;
+}
+.info__label {
+  font-family: var(--f-montserrat);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .info__label {
+    font-size: calc(18px + 6.8 * (100vw - 320px) / 1170);
+  }
+}
+@media (min-width: 767px) {
+  .info__label {
+    font-size: calc(18px + 4 * 100vw / 1170);
+  }
+}
+.info__title {
+  font-family: var(--f-montserrat);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .info__title {
+    font-size: calc(20px + 40.8 * (100vw - 320px) / 1170);
+  }
+}
+@media (min-width: 767px) {
+  .info__title {
+    font-size: calc(20px + 24 * 100vw / 1170);
+  }
+}
+.info__text {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-family: var(--f-open-sans);
+  font-weight: 700;
+  line-height: 166.667%; /* 30px */
+}
+@media (max-width: 767px) {
+  .info__text {
+    font-size: calc(16px + 3.4 * (100vw - 320px) / 1170);
+  }
+}
+@media (min-width: 767px) {
+  .info__text {
+    font-size: calc(16px + 2 * 100vw / 1170);
+  }
+}
+.info > button {
+  margin-bottom: 12.7%;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.contact-details > svg {
+  width: 9px;
+  height: 13px;
+  fill: var(--c-blue-dark);
+}
+.contact-details > span {
+  font-family: var(--f-open-sans);
+  font-weight: 400;
+  font-style: italic;
+}
+@media (max-width: 767px) {
+  .contact-details > span {
+    font-size: calc(14px + 1.7 * (100vw - 320px) / 1170);
+  }
+}
+@media (min-width: 767px) {
+  .contact-details > span {
+    font-size: calc(14px + 1 * 100vw / 1170);
+  }
+}
+
 .logo {
   max-width: 240px;
   display: flex;
@@ -468,6 +636,50 @@ hr {
 }
 .btn-login span:hover {
   color: var(--c-blue-dark);
+}
+
+.button-default {
+  padding: 15px 40px;
+  border: 1px solid var(--c-blue-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень снизу */
+}
+.button-default > span {
+  font-family: var(--f-montserrat);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000;
+}
+@media (max-width: 767px) {
+  .button-default > span {
+    font-size: calc(10px + 6.8 * (100vw - 320px) / 1170);
+  }
+}
+@media (min-width: 767px) {
+  .button-default > span {
+    font-size: calc(10px + 4 * 100vw / 1170);
+  }
+}
+.button-default:hover {
+  background-color: var(--c-blue);
+  border: 1px solid var(--c-blue);
+}
+.button-default:hover > span {
+  color: white;
+}
+.button-default:active {
+  background-color: #2980b9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767px) {
+  .button-default {
+    padding: 15px 18px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

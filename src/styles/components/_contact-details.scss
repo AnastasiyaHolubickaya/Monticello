@@ -1,0 +1,17 @@
+.contact-details{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  & > svg{
+    width: 9px;
+    height: 13px;
+    fill: var(--c-blue-dark);
+  }
+  & > span{
+    font-family: var(--f-open-sans);
+    @include adaptive-font(15, 14);
+    font-weight: 400;
+    font-style: italic;
+  }
+}
