@@ -61,10 +61,10 @@
                  .card__info
                    .card__title
                    .card__text
-                   .autor-card
-                   .autor-card__photo
-                   .autor-card__name
-                   .autor-card__data
+                   .profile
+                   .profile__photo
+                   .profile__name
+                   .profile__data
 
      section .gallery
        .wrapper .gallery__wrapper

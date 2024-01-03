@@ -1,0 +1,30 @@
+.card {
+  width: 370px;
+  color: var(--c-blue-dark);
+  background-color: var(--c-white);
+  text-align: start;
+  flex-shrink: 0;
+
+  &__info {
+    padding: 30px 20px;
+  }
+
+  &__img {
+    @include adaptiveImg(100%, 65%);
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-family: var(--f-montserrat);
+    font-weight: 700;
+    @include adaptive-font(22, 16);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-family: var(--f-open-sans);
+    font-weight: 400;
+    @include adaptive-font(18, 16);
+  }
+}

@@ -1,15 +1,6 @@
 .projects {
   width: 100%;
-  margin-top: 6.25%; //100px
   text-align: center;
-
-  &__title {
-    margin-bottom: 5.625%; //90px
-
-    &:before {
-      margin-bottom: 1.875%; //30px
-    }
-  }
 
   &__wrapper {
     padding-top: 4.75%; //57px
@@ -45,9 +36,26 @@
   @include adaptiveImg(53.8%, 40.2%);
 }
 
-@media (max-width: 767px) {
+// --- @media ---
+@media (max-width: 1024px) {
+  .order {
+    order: -1;
+  }
+
   .projects__wrapper {
     flex-direction: column;
+    gap: 20px;
+  }
 
+  .projects__items {
+    margin-bottom: 5%;
+  }
+
+  .item-image {
+    @include adaptiveImg(100%, 30%);
+  }
+
+  .item-coloring {
+    width: 100%;
   }
 }

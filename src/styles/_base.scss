@@ -7,20 +7,24 @@
 }
 
 .title {
+  margin-bottom: 5.625%; //90px
   font-family: var(--f-montserrat);
   color: var(--c-blue-dark);
   @include adaptive-font(44, 20);
   font-weight: 700;
   text-transform: uppercase;
-  &:before{
+
+  &:before {
     content: "";
     display: block;
     width: 100px;
     height: 1px;
-    margin: 0 auto;
+    margin: 0 auto 1.875% auto; //30px;
     background-color: var(--c-blue-dark);
   }
 }
-section{
+
+section {
   text-align: center;
+  margin-top: 6.25%;
 }

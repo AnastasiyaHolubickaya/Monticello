@@ -1,0 +1,27 @@
+.news {
+  position: relative;
+  padding-top: 3.125%; //50px
+  padding-bottom: 7.5%;
+  background: var(--bg-gradient-2);
+
+  &__title {
+    color: var(--c-white);
+
+    &:before {
+      background-color: var(--c-white);
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+// --- @media ---
+@media screen and (max-width: 1024px) {
+  .news__row {
+    flex-direction: column;
+  }
+}

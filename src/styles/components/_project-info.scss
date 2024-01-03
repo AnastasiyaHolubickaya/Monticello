@@ -32,3 +32,15 @@
     margin-bottom: 12.7%; //60px
   }
 }
+
+@media screen and (max-width: 1024px){
+.info{
+  width: 100%;
+  &__title {
+    margin-top: 10px;
+  }
+  & > button {
+    margin-bottom: 5%;
+  }
+}
+}

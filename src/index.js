@@ -6,7 +6,7 @@ import toggleMobMenu from "./js/toggle-mob-menu.js";
 import registration from "./js/registration.js";
 import  openRegistration from "./js/open-registration.js";
 import closeRegistration from "./js/close-registration.js";
-
+import showMoreImages from "./js/show-more-images.js";
 
 registration();
 // Create Header slider Swiper
@@ -23,3 +23,5 @@ toggleMobMenu();
 openRegistration();
 // Close window with form registration
 closeRegistration();
+//
+showMoreImages();
