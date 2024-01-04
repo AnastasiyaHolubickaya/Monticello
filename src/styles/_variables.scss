@@ -4,6 +4,8 @@
   --c-blue-2: #7E5AFF;
   --c-blue-dark: #2c4058;
   --c-white: #fff;
+  --c-grey: #999DA3;
+  --c-red: red;
   
   // * Fonts
   --f-source-sans-3: 'Source Sans 3', sans-serif;
@@ -17,7 +19,6 @@
   // * background liner-gradient
   --bg-gradient: linear-gradient(243deg, var(--c-blue-2) 16.9%, var(--c-blue) 83.27%);
   --bg-gradient-2: linear-gradient(237deg, #24CCFA 11.16%, #3C7FD4 89.18%);
-
-;
+  --bg-gradient-3: linear-gradient(251deg, #7E5AFF -2.19%, #55B7FF 103.21%);
 }
 

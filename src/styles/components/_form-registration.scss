@@ -8,12 +8,16 @@
   z-index: 1000;
 }
 .icon-cross{
+position: absolute;
+  top:15px;
+  right: 15px;
   & svg{
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
   }
 }
 .registration{
+  position: relative;
   background-color: var(--c-white);
   color: var(--c-black);
   border-radius: 10px;
@@ -51,10 +55,4 @@
     font-size: 12px;
     height: 20px;
   }
-}
-.hidden{
-  display: none;
-}
-.visible{
-  display: block;
 }

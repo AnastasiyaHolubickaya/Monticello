@@ -7,7 +7,7 @@ function openRegistration() {
     throw new Error(`Element  is absent`);
   }
   DOMButtonLogin.addEventListener('click', function (e) {
-    // e.preventDefault();
+    e.preventDefault();
     if (!DOMFormRegistration) {
       throw new Error(`Element  is absent`);
     }

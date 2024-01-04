@@ -6,13 +6,17 @@ function sendRequest(url) {
     }
 
     return response.json().then(error => {
-      const err = new Error('error');
+      const err = new Error('Request failed');
 
       err.data = error;
+      err.status = response.status;
 
       throw err;
     })
-  })
+  }).catch(error => {
+    console.error('Async error:', error);
+    throw error;
+  });
 }
 
 export default sendRequest;

@@ -43,3 +43,9 @@
 .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {
   right: var(--swiper-pagination-right, 52px);
 }
+
+@media screen and (max-width: 767px) {
+  .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {
+    right: var(--swiper-pagination-right, 20px);
+  }
+}

@@ -134,13 +134,14 @@
   </header>
   <!-- * Form Registration -->
   <div class="form-registration" id="js-form-registration">
-    <div class="icon-cross" id="js-close-form">
-      <svg class="cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-        <path
-          d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
-      </svg>
-    </div>
+
     <form method="post" id="js-registration" class="registration">
+      <div class="icon-cross" id="js-close-form">
+        <svg class="cross" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <path
+            d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
+        </svg>
+      </div>
       <!-- Registration title -->
       <h2 class="registration__title">Registration</h2>
 
@@ -167,7 +168,7 @@
       </div>
 
       <!-- Registration submit -->
-      <button type="submit">
+      <button class="button-default" type="submit" id="js-btn-registration">
         <span>Submit</span>
       </button>
     </form>
@@ -303,6 +304,9 @@
     </h2>
     <div class="wrapper news__wrapper">
 
+
+
+
       <div class="news__row">
         <div class="card">
           <div class="card__img">
@@ -410,64 +414,70 @@
   </section>
 
   <!-- * Section Contact -->
-  <section class="contact" id="contact">
-    <div class="contact__map map">
+  <section class="contact" id="contact" >
+    <div class="contact__map map" >
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81425.32171128032!2d-73.92698745227501!3d40.67426370713501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25dd4a85b1acf%3A0x44c77847eb542e7a!2z0JPQu9C10L3QtNC10LnQuywg0JrRg9C40L3RgSwg0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1704156112602!5m2!1sru!2sua"
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="wrapper contact__wrapper">
-
-      <div class="contacts-info">
-        <hr>
+        referrerpolicy="no-referrer-when-downgrade" id="js-map"></iframe>
+      <div class="contacts-info" id="js-contacts">
         <h2 class="contacts-info__title title">
           get in touch
         </h2>
-        <div class="contact-info__description">
-          <div class="contact-details">
-            <div class="contact-details__item">
-              <svg>
-                <use xlink:href="./assets/images/svg/icon-sprite.svg#location"></use>
-              </svg>
-              <span>
+        <div class="contacts-info__description">
+          <div class="feedback-address">
+            <div>
+              <div class="contact-details">
+                <svg>
+                  <use xlink:href="./assets/images/svg/icon-sprite.svg#location"></use>
+                </svg>
+                <span class="contact-details__address">
                     91 Nolan Extensions Suite 670
                   </span>
-            </div>
-            <div class="contact-details__item">
-              <svg>
-                <use xlink:href="./assets/images/svg/icon-sprite.svg#phone"></use>
-              </svg>
-              <span>
+              </div>
+              <div class="contact-details">
+                <svg>
+                  <use xlink:href="./assets/images/svg/icon-sprite.svg#phone"></use>
+                </svg>
+                <span class="contact-details__address">
                     +001 356-868-2454
                   </span>
+              </div>
             </div>
-            <div class="contact-details__item">
-              <svg>
-                <use xlink:href="./assets/images/svg/icon-sprite.svg#print"></use>
-              </svg>
-              <span>
+            <div>
+              <div class="contact-details">
+                <svg>
+                  <use xlink:href="./assets/images/svg/icon-sprite.svg#print"></use>
+                </svg>
+                <span class="contact-details__address">
                     monticello@service.com
                   </span>
-            </div>
-            <div class="contact-details__item">
-              <svg>
-                <use xlink:href="./assets/images/svg/icon-sprite.svg#clock"></use>
-              </svg>
-              <span>
+              </div>
+              <div class="contact-details">
+                <svg>
+                  <use xlink:href="./assets/images/svg/icon-sprite.svg#clock"></use>
+                </svg>
+                <span class="contact-details__address">
                     From 07:05AM to 19.30PM
                   </span>
+              </div>
             </div>
 
           </div>
-          <form name="form-feedback">
+
+          <form class="feedback-form" name="feedback-form" id="js-feedback">
             <div>
-              <label for="name">Mollie Medina</label>
-              <input type="text" id="name">
-              <label for="email">Email</label>
-              <input type="email" id="email">
+              <input type="text" id="js-name" name="name">
+              <label for="js-name" id="name">Name</label>
+              <div class="feedback-form__error" id="js-feedback-first-name-error"></div>
             </div>
-            <button type="submit" class="button">submit</button>
+            <div>
+              <input type="email" id="js-email" name="email">
+              <label for="js-email" id="email">Email</label>
+              <div class="feedback-form__error" id="js-feedback-email-error"></div>
+            </div>
+            <button type="submit" class="button-default" id="js-submit-button-feedback">
+              <span>submit</span></button>
           </form>
         </div>
       </div>
@@ -476,52 +486,60 @@
 
   <!-- * Footer -->
   <footer class="footer">
-    <!-- Logo -->
-    <a href="/" class="logo" title="Home page">
-      <img src="./assets/images/logo.png" alt="logo"/>
-    </a>
-    <!-- Social -->
-    <ul class="social">
-      <li class="social__item">
-        <a
-          href="https://www.facebook.com/"
-          class="social__link"
-          target="_blank"
-          title="Facebook"
-        >
-          <svg class="icon">
-            <use xlink:href="./assets/images/svg/sprite.svg#facebook"></use>
-          </svg>
+    <div class="footer__items">
+      <div>
+        <!-- Logo -->
+        <a href="#" class="logo" title="Home page">
+          <img src="./assets/images/logo.png" alt="logo"/>
         </a>
-      </li>
-      <li class="social__item">
-        <a
-          href="https://www.twitter.com/"
-          class="social__link"
-          target="_blank"
-          title="Twitter"
-        >
-          <svg class="icon">
-            <use xlink:href="#icon-twitter"></use>
-          </svg
+        <p>copyrights @ 2020 Montichello</p>
+
+      </div>
+
+      <!-- Social -->
+      <ul class="social">
+        <li class="social__item">
+          <a
+            href="https://www.facebook.com/"
+            class="social__link"
+            target="_blank"
+            title="Facebook"
           >
-        </a>
-      </li>
-      <li class="social__item">
-        <a
-          href="https://www.Instagram.com/"
-          class="social__link"
-          target="_blank"
-          title="Instagram"
-        >
-          <svg class="icon">
-            <use xlink:href="#icon-instagram"></use>
-          </svg
+            <svg class="icon">
+              <use xlink:href="./assets/images/svg/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a
+            href="https://www.twitter.com/"
+            class="social__link"
+            target="_blank"
+            title="Twitter"
           >
-        </a>
-      </li>
-    </ul>
-    <div>copyrights @ 2020 Montichello</div>
+            <svg class="icon">
+              <use xlink:href="#icon-twitter"></use>
+            </svg
+            >
+          </a>
+        </li>
+        <li class="social__item">
+          <a
+            href="https://www.Instagram.com/"
+            class="social__link"
+            target="_blank"
+            title="Instagram"
+          >
+            <svg class="icon">
+              <use xlink:href="#icon-instagram"></use>
+            </svg
+            >
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
   </footer>
 </div>
 

@@ -1,41 +1,6 @@
-const validation = (value, name, id) => {
-  const DOMError = document.getElementById(id);
+import validation from "./validation.js";
+import validationEmail from "./validation-email.js";
 
-  if (!DOMError) {
-    return false;
-  }
-
-  if (!value) {
-    DOMError.innerText = `${name} is required`;
-    return false;
-  }
-
-  DOMError.innerText = '';
-
-  return true;
-};
-
-const validationEmail = (value, name, id) => {
-  const DOMError = document.getElementById(id);
-
-  if (!DOMError) {
-    return false;
-  }
-
-  if (!value) {
-    DOMError.innerText = `${name} is required`;
-    return false;
-  }
-
-  if (!value.includes('@')) {
-    DOMError.innerText = `${name} must include @`;
-    return false;
-  }
-
-  DOMError.innerText = '';
-
-  return true;
-};
 
 function registration() {
   const DOMForm = document.getElementById('js-registration');
@@ -49,7 +14,7 @@ function registration() {
 
     const form = new FormData(event.target);
 
-    const firstName = form.get('firstName');
+    const firstName = form.get('firstName');// get value
 
     if (!validation(firstName, 'First name', 'js-registration-first-name-error')) {
       return;
@@ -79,7 +44,7 @@ function registration() {
 
   if (user) {
     const data = JSON.parse(user);
-    console.log('data: ', data);
+    //console.log('data: ', data);
 
     const DOMFirstName = document.getElementById('js-registration-first-name');
     const DOMEmail = document.getElementById('js-registration-email');

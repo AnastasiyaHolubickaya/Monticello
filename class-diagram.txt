@@ -36,9 +36,8 @@
              button.button
                span
              .contact-details
-               .contact-details__item
-                 svg
-                 span
+               svg
+               span.__address
        .project__items-commerce
          .wrapper .project__wrapper
            .item-image

@@ -28,3 +28,9 @@
     @include adaptive-font(18, 16);
   }
 }
+
+@media screen and (max-width: 767px) {
+  .card {
+    width: 100%;
+  }
+}
