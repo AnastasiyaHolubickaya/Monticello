@@ -1,58 +1,37 @@
-function newSlider() {
-  const DOMHeaderSliderElement = document.getElementById('js-header-slider');
+function newsSlider() {
+  const DOMHeaderSliderElement = document.getElementById('js-news-slider');
 
   if (!DOMHeaderSliderElement) {
-    throw new Error(`Element with id - ${id} is absent`);
+    throw new Error(`Element ${DOMHeaderSliderElement} is absent`);
   }
   const id = DOMHeaderSliderElement.id;
 
-  const headerSlider = new Swiper(`#${id}`, {
+  const newsSlider = new Swiper(`#${id}`, {
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
 
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
 
     },
-    //grabCursor: true,
-    slideToClickedSlide: true,
-    //keyboard
-    keyboard: {
-      enable: true,
-      onlyInViewport: true,
-      pageUpDown: true,
-    },
-    //mouse wheel control
-    // mousewheel: {
-    //   sensitivity: 1,
-    //   //eventsTarget: ".image-slider"
-    // },
-    autoHeight: true,
     slidesPerView: 1,
-    freeMode: true,
-    // autoplay: {
-    //   delay: 1000,
-    //   stopOnLastSlide: true,
-    //   disableOnInteraction: false,
-    //
-    // },
-    speed: 800,
-
-    // effect: 'fade',
-    // fadeEffect: {
-    //   crossFade: true,
-    // },
-  breakpoints: {
-320: {
-  slidesPerView: 1,
-},
-    480: {
-      slidesPerView: 2,
-    },
-    920: {
-      slidesPerView: 3,
-    },
-  }
+    spaceBetween: 30,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      480: {
+        slidesPerView: 2,
+      },
+      1150: {
+        slidesPerView: 3,
+      },
+    }
   });
 }
 
-export default newSlider;
+export default newsSlider;

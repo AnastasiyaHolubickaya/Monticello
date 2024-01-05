@@ -1,4 +1,4 @@
-import newSlider from "./js/header-slider.js";
+import headerSlider from "./js/header-slider.js";
 import scrollAnimateById from "./js/scroll-animate-by-id.js";
 import scrollChangeProperty from "./js/scroll-change-property.js";
 import toggleBurgerMenu from "./js/toggle-burger-menu.js";
@@ -9,6 +9,7 @@ import closeRegistration from "./js/close-registration.js";
 import showMoreImages from "./js/show-more-images.js";
 import feedback from "./js/feedback.js";
 import hiddenLabelFeedbackForm from "./js/hidden-label.js";
+import newsSlider from "./js/news-slider.js";
 
 
 
@@ -28,8 +29,8 @@ feedback();
 hiddenLabelFeedbackForm();
 
 // Create Header slider Swiper
-newSlider();
-
+headerSlider();
+newsSlider();
 // Header's change  background-color  on scroll
 scrollChangeProperty();
 

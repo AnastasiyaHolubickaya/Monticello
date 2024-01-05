@@ -10,9 +10,12 @@ Page layout using HTML, CSS, SASS, JS
 .
 ├── index.html
 ├── index.js
+├── js
 ├── styles
 │   ├── components
+        ├── index.scss
 │   ├── elements
+        ├── index.scss
 │   ├── index.scss
 └── assets
     └── images
