@@ -1,0 +1,35 @@
+.contacts {
+  position: relative;
+  padding-top: 3.125%;
+  &__map {
+    position: relative;
+  }
+
+  &__title {
+    &::before {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__feedback {
+    position: absolute;
+    top: 90%;
+    left: 48%;
+    width: 54.16%;
+    padding: 3.8%;
+    background-color: var(--c-white);
+    transform: translate(-50%, -50%);
+
+    @media screen and (max-width: 1024px) {
+      width: 90%;
+      padding: 10px;
+      top: 55%;
+    }
+
+    @media screen and (max-width: 425px) {
+      width: 90%;
+      padding: 10px;
+      top: 73%;
+    }
+  }
+}

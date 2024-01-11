@@ -1,0 +1,19 @@
+.contact-details {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  &__icon {
+    width: 9px;
+    height: 17px;
+    fill: var(--c-blue-dark);
+    align-self: flex-start;
+  }
+
+  &__address {
+    font-family: var(--f-open-sans);
+    @include adaptive-font(15, 10);
+    font-weight: 400;
+    font-style: italic;
+  }
+}

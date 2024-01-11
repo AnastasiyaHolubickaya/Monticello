@@ -1,0 +1,18 @@
+.news {
+  position: relative;
+  padding-top: 8.125%;
+  padding-bottom: 12.5%;
+  background: var(--bg-gradient-2);
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__title {
+    color: var(--c-white);
+
+    &:before {
+      background-color: var(--c-white);
+    }
+  }
+}

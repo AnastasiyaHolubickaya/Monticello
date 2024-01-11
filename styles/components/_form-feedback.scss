@@ -1,0 +1,64 @@
+.form {
+  text-align: start;
+  width: 100%;
+  position: relative;
+
+  &__input-group {
+    position: relative;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__label-input {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    font-family: var(--f-montserrat);
+    @include adaptive-font(18, 14);
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--c-grey);
+  }
+
+  &__input {
+    padding-bottom: 19px;
+    width: 100%;
+    border-bottom: 1px solid var(--c-grey);
+
+    &:focus {
+      border-bottom: 1px solid var(--c-blue-dark);
+    }
+
+    &:focus + .form__label-input {
+      display: none;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 50px;
+    right: -10px;
+
+    & .form-button__text {
+      @include adaptive-font(18, 12);
+    }
+
+    @media screen and (max-width: 1024px) {
+      bottom: -40px;
+      right: 10px;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 5px;
+    }
+  }
+
+  &__error {
+    color: var(--c-red);
+    font-size: 12px;
+    height: 20px;
+  }
+}

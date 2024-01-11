@@ -1,0 +1,22 @@
+.gallery {
+  width: 100%;
+  padding-top: 5.125%;
+  &__images {
+    margin-bottom: 10px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 285px));
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image-item {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+
+  &__button {
+    margin: 5% auto 0 auto;
+  }
+}

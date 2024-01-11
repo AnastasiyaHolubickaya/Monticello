@@ -1,0 +1,50 @@
+.card {
+  height: 514px;
+  color: var(--c-blue-dark);
+  background-color: var(--c-white);
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 1600px) {
+    height: 560px;
+  }
+
+  @media screen and (max-width: 767px) {
+    height: 475px;
+  }
+
+  @media screen and (max-width: 500px) {
+    height: auto;
+  }
+
+  &__img {
+    @include adaptiveImg(100%, 65%);
+    margin-bottom: 30px;
+  }
+
+  &__info {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-family: var(--f-montserrat);
+    font-weight: 700;
+    @include adaptive-font(22, 16);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-family: var(--f-open-sans);
+    font-weight: 400;
+    @include adaptive-font(18, 16);
+    flex: 1 1 auto;
+  }
+}

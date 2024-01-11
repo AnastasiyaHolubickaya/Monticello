@@ -1,0 +1,16 @@
+.mobile-menu {
+  position: absolute;
+  left: 0;
+  top: 93px;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 15px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  background: var(--bg-gradient);
+  z-index: 100;
+}

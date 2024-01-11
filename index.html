@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--   * Favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- * Title -->
+    <title>Moticello</title>
+    <!-- * Styles -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- * Scripts -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- * Icons -->
+    <svg
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <defs>
+        <symbol id="icon-facebook" viewBox="0 0 32 32">
+          <path
+            d="M23.438 18h-4.688v14h-6.25v-14h-5.063v-5.813h5.063v-4.375c0-1.667 0.313-3.083 0.938-4.25s1.5-2.042 2.625-2.625c1.167-0.625 2.5-0.938 4-0.938 0.667 0 1.375 0.042 2.125 0.125 0.75 0.042 1.333 0.104 1.75 0.188l0.625 0.063v4.938h-2.5c-1.167 0-2.021 0.313-2.563 0.938-0.5 0.583-0.75 1.313-0.75 2.188v3.75h5.563l-0.875 5.813z"
+          ></path>
+        </symbol>
+        <symbol id="icon-twitter" viewBox="0 0 32 32">
+          <path
+            d="M28.688 9.5c0.042 0.167 0.062 0.438 0.062 0.813 0 2.208-0.417 4.417-1.25 6.625-0.833 2.167-2.021 4.167-3.562 6-1.5 1.792-3.458 3.25-5.875 4.375s-5.083 1.688-8 1.688c-3.667 0-7.021-0.979-10.063-2.938 0.458 0.042 0.979 0.063 1.563 0.063 3.042 0 5.771-0.937 8.188-2.813-1.458 0-2.75-0.417-3.875-1.25-1.083-0.875-1.833-1.958-2.25-3.25 0.417 0.042 0.813 0.063 1.188 0.063 0.583 0 1.167-0.063 1.75-0.188-1-0.208-1.896-0.625-2.688-1.25s-1.417-1.375-1.875-2.25c-0.458-0.917-0.688-1.896-0.688-2.938v-0.125c0.917 0.542 1.896 0.833 2.938 0.875-1.958-1.333-2.938-3.167-2.938-5.5 0-1.167 0.313-2.271 0.938-3.313 1.625 2.042 3.604 3.667 5.938 4.875 2.375 1.208 4.896 1.875 7.562 2-0.083-0.5-0.125-1-0.125-1.5 0-1.792 0.625-3.333 1.875-4.625 1.292-1.292 2.833-1.938 4.625-1.938 1.917 0 3.521 0.688 4.813 2.063 1.5-0.292 2.896-0.813 4.187-1.563-0.5 1.542-1.458 2.75-2.875 3.625 1.25-0.167 2.5-0.521 3.75-1.063-0.917 1.333-2.021 2.479-3.312 3.438z"
+          ></path>
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 32 32">
+          <path
+            d="M10.143 10.214c1.619-1.619 3.571-2.429 5.857-2.429s4.214 0.81 5.786 2.429c1.619 1.571 2.429 3.5 2.429 5.786s-0.81 4.238-2.429 5.857c-1.571 1.571-3.5 2.357-5.786 2.357s-4.238-0.786-5.857-2.357c-1.571-1.619-2.357-3.571-2.357-5.857s0.786-4.214 2.357-5.786zM12.214 19.786c1.048 1.048 2.31 1.571 3.786 1.571s2.738-0.524 3.786-1.571c1.048-1.048 1.571-2.31 1.571-3.786s-0.524-2.738-1.571-3.786c-1.048-1.048-2.31-1.571-3.786-1.571s-2.738 0.524-3.786 1.571c-1.048 1.048-1.571 2.31-1.571 3.786s0.524 2.738 1.571 3.786zM25.857 6.143c0.381 0.333 0.571 0.762 0.571 1.286s-0.191 0.976-0.571 1.357c-0.334 0.381-0.762 0.571-1.286 0.571s-0.976-0.19-1.357-0.571-0.571-0.833-0.571-1.357c0-0.524 0.19-0.952 0.571-1.286 0.381-0.381 0.833-0.571 1.357-0.571s0.952 0.19 1.286 0.571zM31.929 9.429c0.048 1.286 0.071 3.476 0.071 6.571s-0.024 5.286-0.071 6.571c-0.143 2.905-1.024 5.167-2.643 6.786-1.572 1.571-3.81 2.405-6.714 2.5-1.286 0.095-3.476 0.143-6.571 0.143s-5.286-0.048-6.571-0.143c-2.905-0.143-5.143-1-6.714-2.571-0.619-0.571-1.119-1.238-1.5-2s-0.667-1.5-0.857-2.214c-0.143-0.715-0.214-1.548-0.214-2.5-0.095-1.286-0.143-3.476-0.143-6.571s0.048-5.31 0.143-6.643c0.143-2.857 1-5.071 2.571-6.643 1.571-1.619 3.81-2.5 6.714-2.643 1.286-0.048 3.476-0.071 6.571-0.071s5.286 0.024 6.571 0.071c2.905 0.143 5.143 1.024 6.714 2.643 1.619 1.571 2.5 3.81 2.643 6.714zM28.5 25.429c0.143-0.381 0.262-0.857 0.357-1.429 0.095-0.619 0.167-1.333 0.214-2.143 0.048-0.857 0.071-1.548 0.071-2.071s0-1.262 0-2.214c0-0.952 0-1.476 0-1.571 0-0.143 0-0.667 0-1.571 0-0.952 0-1.69 0-2.214s-0.024-1.19-0.071-2c-0.048-0.857-0.119-1.571-0.214-2.143-0.095-0.619-0.214-1.119-0.357-1.5-0.571-1.476-1.595-2.5-3.072-3.071-0.381-0.143-0.881-0.262-1.5-0.357-0.571-0.095-1.286-0.167-2.143-0.214-0.81-0.048-1.476-0.071-2-0.071-0.476 0-1.214 0-2.214 0-0.952 0-1.476 0-1.571 0s-0.619 0-1.571 0c-0.952 0-1.69 0-2.214 0s-1.214 0.024-2.071 0.071c-0.81 0.048-1.524 0.119-2.143 0.214-0.571 0.095-1.048 0.214-1.429 0.357-1.476 0.571-2.5 1.595-3.071 3.071-0.143 0.381-0.262 0.881-0.357 1.5-0.095 0.571-0.167 1.286-0.214 2.143-0.048 0.81-0.071 1.476-0.071 2 0 0.476 0 1.214 0 2.214 0 0.952 0 1.476 0 1.571 0 0.19 0 0.643 0 1.357 0 0.667 0 1.238 0 1.714 0 0.429 0 1 0 1.714 0.048 0.714 0.095 1.333 0.143 1.857 0.048 0.476 0.119 0.976 0.214 1.5s0.19 0.952 0.286 1.286c0.619 1.476 1.643 2.5 3.071 3.072 0.381 0.143 0.857 0.262 1.429 0.357 0.619 0.095 1.333 0.167 2.143 0.214 0.857 0.048 1.524 0.071 2 0.071 0.524 0 1.262 0 2.214 0 1 0 1.548 0 1.643 0 0.143 0 0.667 0 1.571 0 0.952 0 1.69 0 2.214 0s1.19-0.024 2-0.071c0.857-0.048 1.571-0.119 2.143-0.214 0.619-0.095 1.119-0.214 1.5-0.357 1.476-0.619 2.5-1.643 3.072-3.072z"
+          ></path>
+        </symbol>
+        <symbol id="icon-burger" viewBox="0 0 32 32">
+          <path
+            d="M0 3.429h32v6.857h-32zM0 12.571h32v6.857h-32zM0 21.714h32v6.857h-32z"
+          ></path>
+        </symbol>
+        <symbol id="icon-cross" viewBox="0 0 32 32">
+          <path
+            d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"
+          ></path>
+        </symbol>
+        <symbol id="arrow-down" viewBox="0 0 48 32">
+          <path
+            d="M47.492 5.926c0.298 0.298 0.446 0.64 0.446 1.027s-0.149 0.729-0.446 1.027l-20.804 20.804c-0.298 0.298-0.64 0.446-1.027 0.446s-0.729-0.149-1.027-0.446l-20.804-20.804c-0.298-0.298-0.446-0.64-0.446-1.027s0.149-0.729 0.446-1.027l2.232-2.232c0.298-0.298 0.64-0.446 1.027-0.446s0.729 0.149 1.027 0.446l17.545 17.545 17.545-17.545c0.298-0.298 0.64-0.446 1.027-0.446s0.729 0.149 1.027 0.446l2.232 2.232z"
+          ></path>
+        </symbol>
+
+        <symbol id="clock" viewBox="0 0 30 32">
+          <path
+            d="M16.941 9.48c0-0.34-0.265-0.605-0.605-0.605h-1.21c-0.34 0-0.605 0.265-0.605 0.605v6.655h-4.235c-0.34 0-0.605 0.265-0.605 0.605v1.21c0 0.34 0.265 0.605 0.605 0.605h6.050c0.34 0 0.605-0.265 0.605-0.605v-8.471zM24.807 16.135c0 5.672-4.613 10.286-10.286 10.286s-10.286-4.613-10.286-10.286c0-5.672 4.613-10.286 10.286-10.286s10.286 4.613 10.286 10.286zM29.042 16.135c0-8.017-6.504-14.521-14.521-14.521s-14.521 6.504-14.521 14.521c0 8.017 6.504 14.521 14.521 14.521s14.521-6.504 14.521-14.521z"
+          ></path>
+        </symbol>
+
+        <symbol id="location" viewBox="0 0 21 32">
+          <path
+            d="M14.694 10.286c0 2.698-2.2 4.898-4.898 4.898s-4.898-2.2-4.898-4.898c0-2.698 2.2-4.898 4.898-4.898s4.898 2.2 4.898 4.898zM19.592 10.286c0-5.415-4.381-9.796-9.796-9.796s-9.796 4.381-9.796 9.796c0 1.167 0.134 2.372 0.631 3.425l6.983 14.809c0.383 0.842 1.263 1.358 2.181 1.358s1.799-0.517 2.2-1.358l6.964-14.809c0.497-1.052 0.631-2.258 0.631-3.425z"
+          ></path>
+        </symbol>
+
+        <symbol id="phone" viewBox="0 0 32 32">
+          <path
+            d="M30.172 25.658c0-0.15 0-0.3-0.064-0.45-0.15-0.45-1.2-0.921-1.629-1.136-1.221-0.686-2.464-1.35-3.664-2.057-0.557-0.343-1.243-0.986-1.907-0.986-1.307 0-3.214 3.879-4.371 3.879-0.579 0-1.329-0.536-1.843-0.836-3.9-2.164-6.6-4.864-8.764-8.764-0.3-0.514-0.836-1.264-0.836-1.843 0-1.157 3.879-3.064 3.879-4.371 0-0.664-0.643-1.35-0.986-1.907-0.707-1.2-1.371-2.443-2.057-3.664-0.214-0.429-0.686-1.479-1.136-1.629-0.15-0.064-0.3-0.064-0.45-0.064-0.771 0-2.271 0.343-2.979 0.664-1.050 0.45-1.736 1.65-2.271 2.614-0.686 1.264-1.093 2.55-1.093 3.986 0 1.993 0.814 3.793 1.479 5.614 0.471 1.307 1.050 2.571 1.779 3.75 2.25 3.643 6.643 8.036 10.286 10.286 1.179 0.729 2.443 1.307 3.75 1.779 1.821 0.664 3.621 1.479 5.614 1.479 1.436 0 2.721-0.407 3.986-1.093 0.964-0.536 2.164-1.221 2.614-2.271 0.321-0.707 0.664-2.207 0.664-2.979z"
+          ></path>
+        </symbol>
+
+        <symbol id="print" viewBox="0 0 39 32">
+          <path
+            d="M25.294 17.759l-2.349 4.747h-7.912l-2.349-4.747h-7.813c0.049-0.124 0.074-0.272 0.124-0.396l5.242-12.264h17.506l5.242 12.264c0.049 0.124 0.074 0.272 0.124 0.396h-7.813zM37.978 18.5c0-0.89-0.272-2.201-0.618-3.041l-5.885-13.648c-0.346-0.816-1.335-1.459-2.2-1.459h-20.572c-0.865 0-1.854 0.643-2.201 1.459l-5.885 13.648c-0.346 0.841-0.618 2.151-0.618 3.041v11.918c0 0.865 0.717 1.582 1.582 1.582h34.813c0.865 0 1.583-0.717 1.583-1.582v-11.918z"
+          ></path>
+        </symbol>
+
+        <symbol id="menu" viewBox="0 0 32 32">
+          <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
+        </symbol>
+
+        <symbol id="cross" viewBox="0 0 32 32">
+          <path
+            d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"
+          ></path>
+        </symbol>
+      </defs>
+    </svg>
+
+    <div id="app">
+      <!--  Header -->
+      <header class="header" id="js-header">
+        <div class="wrapper header__wrapper">
+          <!-- Logo -->
+          <div class="logo">
+            <a href="#" title="Home page">
+              <img src="./assets/images/logo.png" alt="logo" />
+            </a>
+          </div>
+          <div class="icons-mobile-menu" id="js-icons-mobile-menu">
+            <svg class="icon burger">
+              <use xlink:href="#icon-burger"></use>
+            </svg>
+            <svg class="icon cross">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+          </div>
+          <!-- Navigation -->
+          <nav class="navigation">
+            <div class="navigation__wrapper">
+              <ul
+                class="navigation__list scroll-to"
+                role="list"
+                id="js-navigation-list"
+              >
+                <li class="navigation__item" role="listitem">
+                  <a href="#about" class="navigation__link" title="About us">
+                    <div class="navigation__circle"></div>
+                    ABOUT US
+                  </a>
+                </li>
+                <li class="navigation__item" role="listitem">
+                  <a href="#project" class="navigation__link" title="Projects">
+                    <div class="navigation__circle"></div>
+                    PROJECTS
+                  </a>
+                </li>
+                <li class="navigation__item" role="listitem">
+                  <a href="#news" class="navigation__link" title="News">
+                    <div class="navigation__circle"></div>
+                    NEWS
+                  </a>
+                </li>
+                <li class="navigation__item" role="listitem">
+                  <a href="#contacts" class="navigation__link" title="Contact">
+                    <div class="navigation__circle"></div>
+                    CONTACT
+                  </a>
+                </li>
+                <ul class="social">
+                  <li class="social__item">
+                    <a
+                      href="https://www.facebook.com/"
+                      class="social__link"
+                      target="_blank"
+                      title="Facebook"
+                    >
+                      <svg class="icon">
+                        <use xlink:href="#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a
+                      href="https://www.twitter.com/"
+                      class="social__link"
+                      target="_blank"
+                      title="Twitter"
+                    >
+                      <svg class="icon">
+                        <use xlink:href="#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a
+                      href="https://www.Instagram.com/"
+                      class="social__link"
+                      target="_blank"
+                      title="Instagram"
+                    >
+                      <svg class="icon">
+                        <use xlink:href="#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!--  Section Banner -->
+      <section class="banner">
+        <!--? Slider main container -->
+        <div class="swiper banner-slider" id="js-banner-slider">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="banner-slider__image">
+                <img
+                  src="./assets/images/header-slider/header-slider1.jpg"
+                  alt="background image"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="banner-slider__image">
+                <img
+                  src="./assets/images/header-slider/buildings-modern-cities.jpg"
+                  alt="background image"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="banner-slider__image">
+                <img
+                  src="./assets/images/header-slider/png-tranhouse.png"
+                  alt="background image"
+                />
+              </div>
+            </div>
+          </div>
+          <!--  Pagination billets -->
+          <div class="swiper-pagination banner-slider__pagination"></div>
+        </div>
+        <!-- ? Banner title container-->
+        <div class="wrapper banner__wrapper">
+          <!-- Title -->
+          <div class="banner__title">
+            <h1>SIMPLE & MODERN</h1>
+          </div>
+          <!-- Subtitle -->
+          <div class="banner__subtitle">
+            <h3>WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h3>
+          </div>
+        </div>
+        <!-- Button down -->
+        <button class="banner__button button-down">
+          <a href="#project" title="next" class="navigation__link">
+            <svg class="icon">
+              <use
+                xlink:href="./assets/images/svg/icon-sprite.svg#arrow-down"
+              ></use>
+            </svg>
+          </a>
+        </button>
+      </section>
+
+      <!--  Section Project -->
+      <section class="projects" id="project">
+        <!-- ? Title -->
+        <h2 class="title">WHAT WE DO</h2>
+        <!-- ? Projcts container -->
+        <div class="projects__items">
+          <!-- Color block -->
+          <div class="projects__color-block blue-block"></div>
+          <!-- Wrapper -->
+          <div class="wrapper projects__wrapper">
+            <div class="projects__image">
+              <img
+                src="./assets/images/joel-filipe.jpg"
+                alt="picture"
+                title="photo trade center"
+              />
+            </div>
+            <div class="info">
+              <h3 class="info__label">one world</h3>
+              <h2 class="info__title">trade center</h2>
+              <p class="info__text">
+                Increasing prosperity in our lives can be accomplished by having
+                the right frame of mind. The truth is, our thoughts are very
+                powerful.
+              </p>
+              <button type="button" class="info__button button">
+                <span class="button__text">more details</span>
+              </button>
+              <div class="contact-details">
+                <svg class="icon contact-details__icon">
+                  <use xlink:href="#location"></use>
+                </svg>
+                <address class="contact-details__address">
+                  New York City, United States - 1776 feet
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ? Projcts container -->
+        <div class="projects__items">
+          <!-- Color block -->
+          <div class="projects__color-block violet-block"></div>
+          <!-- Wrapper -->
+          <div class="wrapper projects__wrapper">
+            <div class="info">
+              <h3 class="info__label">international</h3>
+              <h2 class="info__title">commerce center</h2>
+              <p class="info__text">
+                Successful businesses have many things in common, today we’ll
+                look at the big ‘R’ of recognition and how a digital advertising
+                network may help.
+              </p>
+              <button type="button" class="info__button button">
+                <span class="button__text">more details</span>
+              </button>
+              <div class="contact-details">
+                <svg class="icon contact-details__icon">
+                  <use
+                    xlink:href="./assets/images/svg/icon-sprite.svg#location"
+                  ></use>
+                </svg>
+                <address class="contact-details__adress">
+                  Hong Kong - 1588 feet
+                </address>
+              </div>
+            </div>
+            <div class="projects__image order">
+              <img
+                src="./assets/images/photos-1284.jpg"
+                alt="picture"
+                title="photo commerce center"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  Section News -->
+      <section class="news" id="news">
+        <!-- ? Title -->
+        <h2 class="news__title title">latest news</h2>
+        <!-- ? Wrapper -->
+        <div class="wrapper news__wrapper">
+          <!-- Slider main container -->
+          <div class="swiper news-slider" id="js-news-slider">
+            <div class="swiper-wrapper news-slider__wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__img">
+                    <img
+                      src="./assets/images/news-slider/lauren-mancke.jpg"
+                      alt="picture"
+                    />
+                  </div>
+                  <div class="card__info">
+                    <h3 class="card__title">
+                      SEE THE UNMATCHED BEAUTY OF THE GREAT.
+                    </h3>
+                    <p class="card__text">
+                      Free directories: directories are perfect for customers
+                      that are searching for...
+                    </p>
+                    <div class="profile">
+                      <div class="profile__image-container">
+                        <img
+                          src="./assets/images/news-slider/profile-photo1.jpg"
+                          alt="autor's photo"
+                          class="profile__image"
+                        />
+                      </div>
+                      <div class="profile__details">
+                        <span class="profile__name">ALJA BRUN</span>
+                        <time datetime="2020-01-20" class="profile__date"
+                          >20 Jan 2020</time
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__img">
+                    <img
+                      src="./assets/images/news-slider/matthew-hamilton.jpg"
+                      alt="picture"
+                    />
+                  </div>
+                  <div class="card__info">
+                    <h3 class="card__title">EFFECTIVE ADVERTISING POINTERS.</h3>
+                    <p class="card__text">
+                      Having a home based business is a wonderful asset to your
+                      life...
+                    </p>
+                    <div class="profile">
+                      <div class="profile__image-container">
+                        <img
+                          src="./assets/images/news-slider/profile-photo2.jpg"
+                          alt="autor's photo"
+                          class="profile__image"
+                        />
+                      </div>
+                      <div class="profile__details">
+                        <span class="profile__name">DOMINIC FREEMAN</span>
+                        <time datetime="2019-12-13" class="profile__date"
+                          >13 Dec 2019</time
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__img">
+                    <img
+                      src="./assets/images/news-slider/joel-filipe-1516.jpg"
+                      alt="picture"
+                    />
+                  </div>
+                  <div class="card__info">
+                    <h3 class="card__title">
+                      HYPNOTIZE YOURSELF INTO THE GHOST.
+                    </h3>
+                    <p class="card__text">
+                      There are many things that are important to catalog
+                      design...
+                    </p>
+                    <div class="profile">
+                      <div class="profile__image-container">
+                        <img
+                          src="./assets/images/news-slider/profrile-photo3.jpg"
+                          alt="autor's photo"
+                          class="profile__image"
+                        />
+                      </div>
+                      <div class="profile__details">
+                        <span class="profile__name">ALICE WARD</span>
+                        <time datetime="2019-11-30" class="profile__date"
+                          >30 Nov 2019</time
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__img">
+                    <img
+                      src="./assets/images/news-slider/lauren-mancke.jpg"
+                      alt="picture"
+                    />
+                  </div>
+                  <div class="card__info">
+                    <h3 class="card__title">
+                      SEE THE UNMATCHED BEAUTY OF THE GREAT.
+                    </h3>
+                    <p class="card__text">
+                      Free directories: directories are perfect for customers
+                      that are searching for...
+                    </p>
+                    <div class="profile">
+                      <div class="profile__image-container">
+                        <img
+                          src="./assets/images/news-slider/profile-photo1.jpg"
+                          alt="autor's photo"
+                          class="profile__image"
+                        />
+                      </div>
+                      <div class="profile__details">
+                        <span class="profile__name">ALJA BRUN</span>
+                        <time datetime="2020-01-20" class="profile__date"
+                          >20 Jan 2020</time
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__img">
+                    <img
+                      src="./assets/images/news-slider/matthew-hamilton.jpg"
+                      alt="picture"
+                    />
+                  </div>
+                  <div class="card__info">
+                    <h3 class="card__title">EFFECTIVE ADVERTISING POINTERS.</h3>
+                    <p class="card__text">
+                      Having a home based business is a wonderful asset to your
+                      life...
+                    </p>
+                    <div class="profile">
+                      <div class="profile__image-container">
+                        <img
+                          src="./assets/images/news-slider/profile-photo2.jpg"
+                          alt="autor's photo"
+                          class="profile__image"
+                        />
+                      </div>
+                      <div class="profile__details">
+                        <span class="profile__name">DOMINIC FREEMAN</span>
+                        <time datetime="2019-12-13" class="profile__date"
+                          >13 Dec 2019</time
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__img">
+                    <img
+                      src="./assets/images/news-slider/joel-filipe-1516.jpg"
+                      alt="picture"
+                    />
+                  </div>
+                  <div class="card__info">
+                    <h3 class="card__title">
+                      HYPNOTIZE YOURSELF INTO THE GHOST.
+                    </h3>
+                    <p class="card__text">
+                      There are many things that are important to catalog
+                      design...
+                    </p>
+                    <div class="profile">
+                      <div class="profile__image-container">
+                        <img
+                          src="./assets/images/news-slider/profrile-photo3.jpg"
+                          alt="autor's photo"
+                          class="profile__image"
+                        />
+                      </div>
+                      <div class="profile__details">
+                        <span class="profile__name">ALICE WARD</span>
+                        <time datetime="2019-11-30" class="profile__date"
+                          >30 Nov 2019</time
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                  <div class="card__img">
+                    <img
+                      src="./assets/images/news-slider/lauren-mancke.jpg"
+                      alt="picture"
+                    />
+                  </div>
+                  <div class="card__info">
+                    <h3 class="card__title">
+                      SEE THE UNMATCHED BEAUTY OF THE GREAT.
+                    </h3>
+                    <p class="card__text">
+                      Free directories: directories are perfect for customers
+                      that are searching for...
+                    </p>
+                    <div class="profile">
+                      <div class="profile__image-container">
+                        <img
+                          src="./assets/images/news-slider/profile-photo1.jpg"
+                          alt="autor's photo"
+                          class="profile__image"
+                        />
+                      </div>
+                      <div class="profile__details">
+                        <span class="profile__name">ALJA BRUN</span>
+                        <time datetime="2020-01-20" class="profile__date"
+                          >20 Jan 2020</time
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pagination bullets -->
+          <div class="swiper-pagination news-slider__bullets"></div>
+          <!-- Navigation buttons -->
+          <div
+            class="swiper-button-prev news-slider__button-navigation news-slider__button-navigation__prev"
+          ></div>
+          <div
+            class="swiper-button-next news-slider__button-navigation news-slider__button-navigation__next"
+          ></div>
+        </div>
+      </section>
+
+      <!--  Section Gallery -->
+      <section class="gallery" id="about">
+        <!-- ? Title -->
+        <h2 class="title">gallery</h2>
+        <!-- ? Wrapper -->
+        <div class="wrapper">
+          <div class="gallery__images" id="js-gallery-images">
+            <div class="gallery__image-item">
+              <img
+                src="./assets/images/images-gallery/scott-webb-176434%201.jpg"
+                alt="photo"
+              />
+            </div>
+            <div>
+              <img
+                src="./assets/images/images-gallery/photos-13323.jpg"
+                alt="photo"
+              />
+            </div>
+            <div>
+              <img
+                src="./assets/images/images-gallery/echo-grid.jpg"
+                alt="photo"
+              />
+            </div>
+            <div>
+              <img
+                src="./assets/images/images-gallery/fuse-brussels.jpg"
+                alt="photo"
+              />
+            </div>
+            <div>
+              <img
+                src="./assets/images/images-gallery/tu-tram-pham.jpg"
+                alt="photo"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- ? Button -->
+        <button
+          type="button"
+          class="gallery__button button"
+          id="js-button-gallery"
+        >
+          <span class="button__text">see more</span>
+        </button>
+      </section>
+
+      <!--  Section Contact -->
+      <section class="contacts" id="contacts">
+        <!-- ? Map -->
+        <div class="contacts__map map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81425.32171128032!2d-73.92698745227501!3d40.67426370713501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25dd4a85b1acf%3A0x44c77847eb542e7a!2z0JPQu9C10L3QtNC10LnQuywg0JrRg9C40L3RgSwg0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1704156112602!5m2!1sru!2sua"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            id="js-map"
+          ></iframe>
+        </div>
+        <!-- ? Feedback -->
+        <div class="contacts__feedback" id="js-contacts">
+          <!-- Title -->
+          <h2 class="title contacts__title">get in touch</h2>
+          <!-- Feddback block -->
+          <div class="feedback-block">
+            <!-- Address block-->
+            <div class="feedback-block__address">
+              <div class="feedback-block__address-item contact-details">
+                <svg class="icon contact-details__icon feedback-block__icon">
+                  <use xlink:href="#location"></use>
+                </svg>
+                <address
+                  class="contact-details__address feedback-block__contact-address"
+                >
+                  91 Nolan Extensions Suite 670
+                </address>
+              </div>
+              <div class="feedback-block__address-item contact-details">
+                <svg class="icon contact-details__icon feedback-block__icon">
+                  <use xlink:href="#phone"></use>
+                </svg>
+                <a
+                  href="tel:+0013568682454"
+                  class="contact-details__address feedback-block__contact-address"
+                >
+                  +001 356-868-2454
+                </a>
+              </div>
+              <div class="feedback-block__address-item contact-details">
+                <svg class="icon contact-details__icon feedback-block__icon">
+                  <use xlink:href="#print"></use>
+                </svg>
+                <a
+                  href="mailto:monticello@service.com"
+                  class="contact-details__address feedback-block__contact-address"
+                >
+                  montichello@service.com
+                </a>
+              </div>
+              <div class="feedback-block__address-item contact-details">
+                <svg class="icon contact-details__icon feedback-block__icon">
+                  <use xlink:href="#clock"></use>
+                </svg>
+                <time
+                  class="contact-details__address feedback-block__contact-address"
+                  datetime="2023-01-01T07:05/2023-01-01T19:30"
+                >
+                  From 07:05AM to 19.30PM
+                </time>
+              </div>
+            </div>
+            <!-- Form block -->
+            <form
+              class="feedback-block__form form"
+              name="feedback-form"
+              id="js-feedback"
+            >
+              <div class="form__input-group">
+                <input
+                  type="text"
+                  id="js-name"
+                  name="name"
+                  class="form__input"
+                />
+                <label for="js-name" id="name" class="form__label-input"
+                  >Name</label
+                >
+                <div
+                  class="feedback-form__error"
+                  id="js-feedback-first-name-error"
+                ></div>
+              </div>
+              <div class="form__input-group">
+                <input
+                  type="email"
+                  id="js-email"
+                  name="email"
+                  class="form__input"
+                />
+                <label for="js-email" id="email" class="form__label-input"
+                  >Email</label
+                >
+                <div
+                  class="feedback-form__error"
+                  id="js-feedback-email-error"
+                ></div>
+              </div>
+              <button
+                type="submit"
+                class="button form__button"
+                id="js-submit-button-feedback"
+              >
+                <span class="button__text form-button__text">submit</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Footer -->
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__group">
+            <!-- Logo -->
+            <a href="#" class="logo" title="Home page">
+              <img src="./assets/images/logo.png" alt="logo" />
+            </a>
+            <p class="footer__text">copyrights &copy; 2020 Montichello</p>
+          </div>
+
+          <!-- Social -->
+          <ul class="social">
+            <li class="social__item">
+              <a
+                href="https://www.facebook.com/"
+                class="social__link"
+                target="_blank"
+                title="Facebook"
+              >
+                <svg class="icon">
+                  <use xlink:href="#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a
+                href="https://www.twitter.com/"
+                class="social__link"
+                target="_blank"
+                title="Twitter"
+              >
+                <svg class="icon">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a
+                href="https://www.Instagram.com/"
+                class="social__link"
+                target="_blank"
+                title="Instagram"
+              >
+                <svg class="icon">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- * Scripts -->
+    <script defer type="module" src="./index.js"></script>
+  </body>
+</html>
