@@ -1,4 +1,4 @@
-import anime from '../node_modules/animejs/lib/anime.es.js';
+//import anime from '../node_modules/animejs/lib/anime.es.js';
 
 function scrollAnimateById() {
   const linksArray = [...document.getElementsByClassName('navigation__link')];

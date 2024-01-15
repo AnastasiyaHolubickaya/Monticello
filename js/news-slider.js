@@ -1,4 +1,4 @@
-
+//import Swiper from '../node_modules/swiper/swiper-bundle.min.mjs';
 function newsSlider() {
   new Swiper(`#js-news-slider`, {
     navigation: {

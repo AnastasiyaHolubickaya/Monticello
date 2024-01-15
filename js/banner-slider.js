@@ -1,3 +1,4 @@
+//import Swiper from '../node_modules/swiper/swiper-bundle.min.mjs';
 
 function bannerSlider() {
   new Swiper(`#js-banner-slider`, {
