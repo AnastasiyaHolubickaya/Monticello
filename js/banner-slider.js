@@ -1,3 +1,4 @@
+
 function bannerSlider() {
   new Swiper(`#js-banner-slider`, {
     pagination: {

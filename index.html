@@ -8,13 +8,13 @@
     <!-- * Title -->
     <title>Moticello</title>
     <!-- * Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/index.css" />
     <!-- * Scripts -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- * Icons -->
@@ -236,9 +236,7 @@
         <button class="banner__button button-down">
           <a href="#project" title="next" class="navigation__link">
             <svg class="icon">
-              <use
-                xlink:href="./assets/images/svg/icon-sprite.svg#arrow-down"
-              ></use>
+              <use xlink:href="#arrow-down"></use>
             </svg>
           </a>
         </button>
@@ -302,9 +300,7 @@
               </button>
               <div class="contact-details">
                 <svg class="icon contact-details__icon">
-                  <use
-                    xlink:href="./assets/images/svg/icon-sprite.svg#location"
-                  ></use>
+                  <use xlink:href="#location"></use>
                 </svg>
                 <address class="contact-details__adress">
                   Hong Kong - 1588 feet
@@ -765,7 +761,7 @@
                 title="Facebook"
               >
                 <svg class="icon">
-                  <use xlink:href="#facebook"></use>
+                  <use xlink:href="#icon-facebook"></use>
                 </svg>
               </a>
             </li>

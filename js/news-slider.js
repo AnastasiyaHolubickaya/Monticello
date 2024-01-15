@@ -1,3 +1,4 @@
+
 function newsSlider() {
   new Swiper(`#js-news-slider`, {
     navigation: {
